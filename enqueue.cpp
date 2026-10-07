@@ -14,7 +14,8 @@ public:
         front = -1;
         rear = -1;
     }
- void enqueue(int value)
+    
+    void enQueue(int value)
     {
         if (rear == 4)
         {
@@ -32,7 +33,8 @@ public:
 
         cout << value << " inserted into queue" << endl;
     }
-void dequeue()
+    
+    void deQueue()
     {
         if (front == -1 || front > rear)
         {
@@ -70,24 +72,43 @@ void dequeue()
 
 int main()
 {
-  Queue q;
-  int choice;
-  
-  do
-  {
-  cout<<"1. Enqueue";
-  cout<<"2. Dequeue";
-  cout<<"3. Display";
-  
-  switch(choice)
-  {
-    case 1:q1.enQueue();
-            break;
-    case 1:q1.deQueue();
-            break;
-    case 1:q1.display();
-            break;            
-  }
+    Queue q1;
+    int choice;
+    int value;
+
+    do
+    {
+        cout << "\n1. Enqueue" << endl;
+        cout << "2. Dequeue" << endl;
+        cout << "3. Display" << endl;
+        cout << "4. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+            case 1:
+                cout << "Enter value: ";
+                cin >> value;
+                q1.enQueue(value);
+                break;
+
+            case 2:
+                q1.deQueue();
+                break;
+
+            case 3:
+                q1.display();
+                break;
+
+            case 4:
+                cout << "Exit" << endl;
+                break;
+
+            default:
+                cout << "Invalid choice" << endl;
+        }
+    } while (choice != 4);
 
     return 0;
-}  
+}
