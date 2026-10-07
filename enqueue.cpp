@@ -70,22 +70,24 @@ void dequeue()
 
 int main()
 {
-    Queue q;
-
-    q.enqueue(10);
-    q.enqueue(7);
-    q.enqueue(9);
-    q.enqueue(2);
-    q.enqueue(13);
-
-    q.display();
-
-    q.dequeue();
-    q.display();
-
-    q.enqueue(18);
-    q.display();
+  Queue q;
+  int choice;
+  
+  do
+  {
+  cout<<"1. Enqueue";
+  cout<<"2. Dequeue";
+  cout<<"3. Display";
+  
+  switch(choice)
+  {
+    case 1:q1.enQueue();
+            break;
+    case 1:q1.deQueue();
+            break;
+    case 1:q1.display();
+            break;            
+  }
 
     return 0;
 }  
-
